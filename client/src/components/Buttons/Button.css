@@ -1,0 +1,65 @@
+
+.my-primary {
+    background: rgba(0, 0, 0, 0.192);
+    color:black;
+    
+    
+}
+.my-primary:hover {
+    background-color:  #070708ae;
+    color:  #f3f4f6;
+    /* outline: 1px solid #7c3aed; */
+    
+
+}
+.my-secondary{
+    background-color:black;
+    color: #f3f4f6;
+}
+.my-secondary:hover{
+    background-color:  #070708ae;
+}
+
+.my-third {
+    background-color: #f3f4f6ad;
+    color: black;
+}
+.my-third:hover {
+    background:#f3f4f6;
+}
+
+.my-rounded-btn {
+    
+    
+
+    border-radius: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: rgba(0, 0, 0, 0.086);
+    border: none;
+      
+
+}
+.my-rounded-btn:hover {
+    background: rgba(0, 0, 0, 0.193);
+   
+}
+.btn-normal {
+    
+    width: 100%;
+    /* padding: 15px ; */
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    backdrop-filter: var( --blur--white);
+    
+    
+}
+

@@ -1,0 +1,21 @@
+
+
+
+.link{
+    
+    font-size: 1.5rem;
+    padding-top:.5rem;
+    padding-bottom: .5rem;
+    padding-left: 2rem;
+    padding-right: 5rem;
+    border-radius: 10px;
+    transition: background-color .3s;
+    color:black; 
+    
+}
+
+
+.dropown-menu .link:hover {
+    background-color: rgba(0, 0, 0, 0.096);
+}
+

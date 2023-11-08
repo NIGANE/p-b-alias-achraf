@@ -1,0 +1,77 @@
+[
+    {
+      "id": 1,
+      "name": "Hopium Hydrogen Car ",
+      "category": "Sedan",
+      "information": "The Hopium Hydrogen Car is an innovative hydrogen fuel cell-powered sedan that offers a luxurious driving experience with cutting-edge technology.",
+      "battery_duration": "400 miles",
+      "production_date": "2023-12-10",
+      "price":"85000$",
+      "image_url": "https://example.com/hopium_hydrogen_car_4k.jpg"
+    },
+    {
+        
+        "id": 2,
+        "name": "hyperionx",
+        "category": "Concept",
+        "information": "The HyperionX is a cutting-edge hydrogen fuel cell and electric hybrid SUV, blending sustainability with luxury and performance.",
+        "battery_duration": "1000 miles (electric mode)",
+        "production_date": "2023-05-15",
+        "price": "200000$",
+        "image_url": "https://example.com/hopium_hydrogen_car_4k.jpg"
+      },
+      {
+        "id": 3,
+        "name": "pininfarina X",
+        "category": "Sports",
+        "information": "HydroSport X is a high-performance hydrogen-powered sports car for enthusiasts.",
+        "battery_duration": "350 miles",
+        "production_date": "2023-08-20",
+        "price": "150000$",
+        "image_url": "https://example.com/hopium_hydrogen_car_4k.jpg"
+  
+      },
+      {
+        "id": 4,
+        "name": "NAMX",
+        "category": "SUV",
+        "information": "The NAMX is a compact electric car designed for urban mobility, known for its energy efficiency and sleek design.",
+       "battery_duration": "180 miles",
+        "production_date": "2023-04-10",
+        "price": "100000$",
+        "image_url": "https://example.com/hopium_hydrogen_car_4k.jpg"
+      },
+      {
+        "id": 5,
+        "name": "VW XL1",
+        "category": "Compact",
+        "information": "The VW XL1 is a highly fuel-efficient plug-in hybrid compact car designed for eco-conscious urban commuters.",
+        "battery_duration": "31 miles (electric mode)",
+        "production_date": "2013-01-28",
+        "price": "20000$",
+        "image_url": "https://example.com/vw_xl1.jpg"
+      },
+      
+     
+      {
+        "id": 6,
+        "name": "HUMMER H2 Hydro",
+        "category": "Pickup Truck",
+        "information": "The HUMMER H2 Hydro is a rugged and powerful pickup truck featuring a hydrogen fuel cell system, making it an eco-friendly off-road beast.",
+        "battery_duration": "250 miles",
+        "production_date": "2023-09-05",
+        "price": "60000$",
+        "image_url": "https://example.com/hummer_h2_hydro.jpg"
+      }
+      
+    ]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

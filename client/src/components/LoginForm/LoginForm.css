@@ -1,0 +1,49 @@
+
+
+.mini {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+
+
+
+form *{
+  font-family: 'Poppins',sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.form-header {
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+}
+
+
+
+.social {
+  margin-top: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  /* max-width: fit-content; */
+  align-items:center;
+
+
+}
+
+.or {
+  margin-top: 24px;
+  font-size: medium ;
+  text-align: center;
+  font-weight: 400;
+  /* border-top: 1px solid rgba(24, 24, 24, 0.647); */
+  /* border-radius: 6px; */
+}
+
+
+
+
+

@@ -1,0 +1,7 @@
+# Ignore Node modules in both client and server
+client/node_modules/
+server/node_modules/
+
+# Optionally, ignore package-lock files if you have them
+client/package-lock.json
+server/package-lock.json
