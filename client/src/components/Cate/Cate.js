@@ -13,7 +13,7 @@ import { useEffect ,useState} from 'react'
 const Cate = () => {
   const [categories ,setCategories] = useState([])
   useEffect(()=>{
-    axios.get('http://localhost:3001/categories')
+    axios.get('http://localhost:3001/api')
      .then(res => setCategories(res.data))
      .catch(err =>console.log(err))
 

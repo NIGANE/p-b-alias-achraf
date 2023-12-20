@@ -3,10 +3,11 @@ import './ItemCard.css'
 import './../../tailwindcss.css'
 
 import React from 'react'
+// import imagexn from './../../assets/images/CatImg/cat_sport.jpg'
 
 const ItemCard = ({name ,imgName}) => {
 
-    let fullpath = `./../../assets/images/CatImg/cat_sedan.jpg`
+    let fullpath = `http://localhost:3001/images/${imgName}`
     
 
   return (
