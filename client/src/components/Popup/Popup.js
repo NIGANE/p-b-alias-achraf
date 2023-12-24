@@ -1,21 +1,22 @@
 import './Popup.css'
-import {Button} from './../index'
+
 import './../../tailwindcss.css';
-import {useEffect, useRef} from 'react'
+import { useEffect, useRef} from 'react'
 import {RiCloseFill} from 'react-icons/ri'
 
 
-const Popup = ({children,trigger,muteTrigger}) => {
+const Popup = ({children,trigger,PopHandler}) => {
   const popHolder = useRef()
-  
-
+ 
 useEffect(()=>{
+  
   if(trigger){
     popHolder.current.addEventListener('click',()=>{
-      muteTrigger()
-    })
-  }
-},[trigger,muteTrigger])
+      PopHandler()
+    })}
+    
+},[trigger,PopHandler])
+
   
 
   return (trigger ? ( 
@@ -31,7 +32,7 @@ useEffect(()=>{
       <div className='fixed top-0 left-0  flex justify-center items-center   h-[100vh] w-[100%]   '>
         <span ref={popHolder} className='absolute top-0 left-0 bg-black  bg-opacity-[30%] backdrop-blur-[12px]  w-[100%] h-[100%] '></span>
         <div className='relative p-[32px] max-w-[640px] w-[100%] bg-white text-black h-fit  rounded-lg '>
-              <span className='absolute top-[1rem] right-[1rem] z-10'><Button onClick={muteTrigger} cls={'p-[1rem]'} type='rounded-btn'><RiCloseFill size={25} /></Button></span>
+              <span className='absolute top-[1rem] right-[1rem] z-10 '  onClick={PopHandler} ><button className='text-2xl' ><RiCloseFill size={35} /></button></span>
               <main className=''>
                   {children}
               </main>

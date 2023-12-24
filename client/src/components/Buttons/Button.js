@@ -1,13 +1,13 @@
 import './Button.css'
 
 
-const Button = ({children,type,cls ,...other}) => {
+const Button = ({children,type,cls,event ,...other}) => {
   
-  const classes= type === 'rounded-btn' ? `my-rounded-btn ` :`btn-normal ${type}`
-  
+  const classes= type === 'rounded-btn' ? `my-rounded-btn ` :`btn-normal ${type}`;
+
   return (
     <>
-      <button className={`${classes} ${cls} `} {...other}>
+      <button className={`${classes} ${cls} `} onClick={event}  {...other}>
           {children}
         
       </button>
