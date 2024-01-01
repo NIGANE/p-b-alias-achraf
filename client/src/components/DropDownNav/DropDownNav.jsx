@@ -1,19 +1,29 @@
 import './dropdownnav.css'
-import {Container ,Button, LoginForm} from './../index'
+import {Container ,Button} from './../index'
 
-import {useState } from 'react'
+import {useEffect, useState } from 'react'
 import { RiCloseFill } from 'react-icons/ri'
 import blackLogo from './../../assets/images/NamX_Logo-black.png'
 import { Link } from 'react-router-dom';
 import './../../tailwindcss.css';
 import { useSelector ,useDispatch } from 'react-redux'
 import { dropDownActions } from './../../store/dropDownSlice'
+import { show  } from './../../store/loginPop'
+
 
 
 const DropDownNav = () => {
     const dispatch = useDispatch()
+    // const [pop,setPop] = useState(false)
+    const [swip,setSwip] = useState()
+    
     const status = useSelector(state => state.drop.drop)
-    const [pop,setPop] = useState(false)
+    const {signed,userinfo:{name}} = useSelector(state=> state.user)
+    
+
+
+
+
     
 
     
@@ -29,13 +39,27 @@ const DropDownNav = () => {
         droping = 'transform translate-y-[-70rem] absolute'
     }
 
-    const PopHandler = ()=>{
-        dispatch(dropDownActions.notDroping());
-        setPop(!pop)
+
+
+    useEffect((PopHandler)=>{
+        if(signed){
+            setSwip(name)
+        }else{
+
+            setSwip("Join us")
+        }
+    },[name,signed])
+
+    const handelClick = ()=>{
+        if(signed){
+
+        }else{
+
+            dispatch(show());
+            dispatch(dropDownActions.notDroping())
+        }
     
     }
-
-    
 
   return (
     <>
@@ -60,7 +84,9 @@ const DropDownNav = () => {
                     <Link to='/Products' className=" link " onClick={()=>dispatch(dropDownActions.notDroping())}>      <span >Items</span></Link>
                     <Link to='/about'  className='link' onClick={()=>dispatch(dropDownActions.notDroping())}> <span >About</span></Link>
                     <Link to='/' className='link' onClick={()=>dispatch(dropDownActions.notDroping())}><span >Contact</span> </Link>
-                            <span className='link' onClick={PopHandler} >Join us</span> 
+                            <span className='link'  onClick={handelClick} > {swip}</span>
+                                
+                            
                     
                         
                         
@@ -71,7 +97,7 @@ const DropDownNav = () => {
                 
             </span>
         </div>
-        <LoginForm pop={pop} PopHandler={PopHandler} />    
+           
     </>
   )
 }

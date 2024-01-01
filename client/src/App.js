@@ -2,8 +2,9 @@
 import './App.css';
 
 import {Home,About,Products} from './pages/index';
-import {Header,Footer} from './components/index'
+import {Header,Footer ,LoginForm} from './components/index'
 import {BrowserRouter as Router ,Route ,Routes } from 'react-router-dom';
+
 
 
 
@@ -14,7 +15,7 @@ function App() {
     <>
       <Router>
         <Header />
-        
+        <LoginForm /> 
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/Products' element={<Products />} />

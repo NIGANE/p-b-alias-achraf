@@ -15,10 +15,13 @@ import { DropDownNav } from './../index'
 
 
 
+
 const Header = () => {
     const [headerBg , setHeaderBg ] = useState({bgColor:'bg-opacity-40',paddingY:'py-[2rem]'})
     const dispatch = useDispatch()
+   
     // const drop = useSelector(state=>state.drop.drop)
+   
     
     
     
@@ -68,7 +71,7 @@ const Header = () => {
 
                 <nav className={`px-[1rem] xl:px-[6rem] flex justify-between  items-center ${headerBg.paddingY} transition-all duration-700`}>
                         <span className=" logo ">
-                            <Link to='/' ><img src={whiteLogo} alt='logoBrand'  className=' h-[3rem] w-[50px] md:w-[90px]'/></Link>
+                            <Link to='/' ><img src="https://www.namx-hydrogen.com/svg/logo-namx.svg" alt='logoBrand'  className=' h-[3rem] w-[50px] md:w-[90px]'/></Link>
                         </span>   
                         <span className='flex items-center justify-center'>
                             

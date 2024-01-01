@@ -34,7 +34,7 @@ const Cate = () => {
         {
           cat.map(item=>{
             return (
-              <ItemCard key={item.id} name={item.name}  imgName={item.img_url} />
+              <ItemCard key={item._id} name={item.name}  imgName={item.img_url} />
             )
           })
         }
