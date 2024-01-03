@@ -12,6 +12,7 @@ import { show  } from './../../store/loginPop'
 
 
 
+
 const DropDownNav = () => {
     const dispatch = useDispatch()
     // const [pop,setPop] = useState(false)
@@ -51,13 +52,10 @@ const DropDownNav = () => {
     },[name,signed])
 
     const handelClick = ()=>{
-        if(signed){
-
-        }else{
-
+        if(!signed){
             dispatch(show());
-            dispatch(dropDownActions.notDroping())
         }
+        dispatch(dropDownActions.notDroping())
     
     }
 
@@ -84,7 +82,7 @@ const DropDownNav = () => {
                     <Link to='/Products' className=" link " onClick={()=>dispatch(dropDownActions.notDroping())}>      <span >Items</span></Link>
                     <Link to='/about'  className='link' onClick={()=>dispatch(dropDownActions.notDroping())}> <span >About</span></Link>
                     <Link to='/' className='link' onClick={()=>dispatch(dropDownActions.notDroping())}><span >Contact</span> </Link>
-                            <span className='link'  onClick={handelClick} > {swip}</span>
+                    <Link to={signed? '/profile' :'#'}  className='link'  onClick={handelClick} > {swip}</Link>
                                 
                             
                     

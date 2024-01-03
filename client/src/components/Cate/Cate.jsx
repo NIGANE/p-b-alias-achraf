@@ -2,7 +2,7 @@ import './Cate.css'
 import {ItemCard} from '../index'
 import axios from 'axios'
 import '../../tailwindcss.css'
-import { useEffect ,useState} from 'react'
+import { useEffect ,useState } from 'react'
 
 
 
@@ -10,11 +10,12 @@ import { useEffect ,useState} from 'react'
 
 
 
-const Cate = () => {
+
+const Cate = ({sectionRef}) => {
   const [cat ,setCat ] = useState([])
   useEffect( ()=>{
     const fetching=async ()=>{
-      await axios.get('http://127.0.0.1:3001/api')
+      await axios.get('http://127.0.0.1:3001/catigories')
       .then(data=>setCat(data.data))
       .catch(err=>{
         console.log('server Error ')
@@ -26,10 +27,10 @@ const Cate = () => {
     
   return (
     <>
-    <div className='my-[4rem] mb-[2rem]'>
+    <div ref={sectionRef} className='my-[4rem] mb-[2rem] ' >
       <div className='flex flex-col justify-center items-center gap-10 text-[3rem]  py-[1rem]'>
-      <h3 className="text-[3rem] font-bold mb-[3rem]">CATEGORIES</h3>
-        <div className='flex items-start justify-center gap-4 flex-wrap'>
+      <h3 className="lg:text-[4rem] md:text-[3rem] text-[2rem] font-bold  ">CATEGORIES</h3>
+        <div className='flex items-start justify-center gap-2 md:gap-4 flex-wrap'>
 
         {
           cat.map(item=>{

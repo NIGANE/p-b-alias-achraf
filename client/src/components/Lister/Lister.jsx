@@ -1,13 +1,52 @@
-import React from 'react'
-import './../../tailwindcss.css';
+import React from "react";
+import "./../../tailwindcss.css";
+import { Rounded } from "./../index";
+import { useSelector ,useDispatch} from "react-redux";
+import { CardV2 } from "./../index";
+import { addToCart } from "./../../store/productsSlice";
+import { show } from './../../store/loginPop'
 
 const Lister = () => {
-  return (
-    <div>
-        Lorem ipsum dolor sit amet.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae vel laboriosam aliquid hic, nesciunt at provident repellat saepe reprehenderit eum non nam cupiditate. Voluptate placeat soluta incidunt ut laboriosam exercitationem minima, maxime quae architecto, repellat quisquam libero, ea autem suscipit repudiandae dicta animi ab sed possimus consectetur! Facere eligendi iste excepturi velit voluptatibus sint, iure cumque quo sed architecto ut laboriosam deleniti corrupti magnam dolorem obcaecati minima, accusantium quod tempora, voluptate autem! Officia illum, doloremque beatae quisquam quaerat corrupti! Nisi quod nobis cumque sequi adipisci consequuntur ab aliquid fugit aspernatur explicabo? Voluptas facere magnam similique? Magnam hic deserunt cumque repellendus.
-    </div>
-  )
-}
+  const products = useSelector((state) => state.products.products);
+  
+  const signed = useSelector((state) => state.user.signed);
+  const dispatch = useDispatch()
 
-export default Lister
+
+  const addToCartHandler = (id) => {
+    if (signed) {
+      const item = products.find(item=> item._id === id)
+      dispatch(addToCart(item))
+    }
+    else{
+      dispatch(show())
+    }
+  };
+
+  const list = products.map((item, index) => {
+    return (
+      <CardV2
+        key={index}
+        title={item.name}
+        src={item.img_url}
+        price={item.price}
+        addToCartHandler={addToCartHandler}
+        id={item._id}
+      />
+    );
+  });
+  return (
+    <div className="mt-[2rem] flex flex-col justify-center items-center ">
+      <h3 className="text-[2rem] md:text-[3rem] container ps-[2rem] tracking-tight text-center  font-semibold text-indigo-500">
+        Product Lists
+      </h3>
+      <Rounded>
+        <div className="flex justify-center gap-4 flex-wrap py-[2rem] rounded-lg">
+          {list}
+        </div>
+      </Rounded>
+    </div>
+  );
+};
+
+export default Lister;

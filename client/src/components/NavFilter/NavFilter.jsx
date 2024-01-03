@@ -1,16 +1,18 @@
 import React from 'react'
 import './../../tailwindcss.css';
+import {Rounded} from './../index'
+
 
 const NavFilter = () => {
   return (
-    <>
-       <div className=' text-slate-50 max-w-[900px]  m-auto pt-[7rem]  '>
-        <div className='bg-slate-700 bg-opacity-[100%] backdrop-blur-[20px] rounded-2xl  px-6 py-3 '>
+    <div className='mt-[1rem]'>
+      
+        <Rounded >
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus hic nulla vel esse
-        </div>
-        </div> 
-    </>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus hic nulla vel esse
+        </Rounded>
+        
+    </div>
   )
 }
 

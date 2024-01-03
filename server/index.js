@@ -10,11 +10,18 @@ const auth = require('./logic/auth')
 
 app.use(cors());
 app.use(express.json())
-app.use("/images",express.static("./../client/src/assets/images/CatImg/"));
+app.use("/catigories",express.static("./../client/src/assets/images/CatImg/"));
+app.use("/products",express.static("./../client/src/assets/images/PrImg/"));
 
 
-app.get("/api", async(req, res) => {
+app.get("/catigories", async(req, res) => {
     const col= await db.collection('catigories')
+    const data = await col.find().toArray()
+    res.json(data);
+});
+
+app.get("/products", async(req, res) => {
+    const col= await db.collection('products')
     const data = await col.find().toArray()
     res.json(data);
 });

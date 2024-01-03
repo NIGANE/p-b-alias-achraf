@@ -20,6 +20,14 @@ const userSlice= createSlice({
             const {name,email,password} = action.payload
             state.signed=true
             state.userinfo = {name,email,password}
+        },
+        logout:(state,action)=>{
+            state.signed = false;
+            state.userinfo = {
+                name:'',
+                email:'',
+                password:''
+            }
         }
     }
 })

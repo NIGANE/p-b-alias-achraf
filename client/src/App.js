@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import {Home,About,Products} from './pages/index';
+import {Home,About,Products,User} from './pages/index';
 import {Header,Footer ,LoginForm} from './components/index'
 import {BrowserRouter as Router ,Route ,Routes } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ function App() {
           <Route path='/Products' element={<Products />} />
 
           <Route path='/about' element={<About />} />
-          {/* <Route path='/' element={<Item />} /> */}
+          <Route path='/profile' element={<User />} />
           
         </Routes>
         <Footer />
