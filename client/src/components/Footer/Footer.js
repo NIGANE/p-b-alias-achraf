@@ -35,20 +35,20 @@ const Footer = () => {
                     
                     <ul className="flex flex-wrap items-center justify-center text-sm font-medium text-gray-500  dark:text-gray-400">
                         <li>
-                            <Link href="#" className="mr-4 hover:underline md:mr-6 md:text-[1rem] ">About</Link>
+                            <Link to="/about" className="mr-4 hover:underline md:mr-6 md:text-[1rem] ">About</Link>
                         </li>
                         <li>
-                            <Link href="#" className="mr-4 hover:underline md:mr-6 md:text-[1rem]">Privacy Policy</Link>
+                            <Link to="/" className="mr-4 hover:underline md:mr-6 md:text-[1rem]">Privacy Policy</Link>
                         </li>
                         <li>
-                            <Link href="#" className="mr-4 hover:underline md:mr-6 md:text-[1rem] ">Licensing</Link>
+                            <Link to="/" className="mr-4 hover:underline md:mr-6 md:text-[1rem] ">Licensing</Link>
                         </li>
                         <li>
-                            <Link href="#" className="hover:underline md:text-[1rem]">Contact</Link>
+                            <Link to="/contact" className="hover:underline md:text-[1rem]">Contact</Link>
                         </li>
                     </ul>
                     <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                    <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+                    <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="/ttps://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
                 </div>
             </div>
         </footer>

@@ -2,8 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const init = {
   products: [],
-  len: 0,
-  cart: [],
+  len: 0,  
 };
 
 const productsSlice = createSlice({
@@ -13,10 +12,7 @@ const productsSlice = createSlice({
     put: (state, action) => {
       state.products = [...action.payload];
       state.len = state.products.length;
-    },
-    addToCart: (state, action) => {
-      state.cart.push(action.payload);
-    },
+    }
   },
 });
 

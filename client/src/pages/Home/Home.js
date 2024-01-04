@@ -1,7 +1,7 @@
 import "./Home.css";
 import "./../../tailwindcss.css";
 import { Hero, Sentence, Cate } from "../../components/index";
-import { useRef } from "react";
+import { useRef ,useEffect } from "react";
 
 
 const Home = () => {
@@ -14,6 +14,10 @@ const Home = () => {
       sectionRef.current.scrollIntoView({ behavior: 'smooth',block:"center" });
     }
   };
+  
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },[])
 
 
   return (

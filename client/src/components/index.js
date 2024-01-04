@@ -15,5 +15,6 @@ export { default as Lister } from './Lister/Lister';
 export { default as NavFilter } from './NavFilter/NavFilter';
 export { default as Rounded } from './Rounded/Rounded';
 export { default as CardV2 } from './Card_v2/Card_v2';
+export { default as Panier } from './Panier/Panier';
 
 

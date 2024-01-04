@@ -9,6 +9,7 @@ import './../../tailwindcss.css';
 import { useSelector ,useDispatch } from 'react-redux'
 import { dropDownActions } from './../../store/dropDownSlice'
 import { show  } from './../../store/loginPop'
+import { MdAccountCircle } from "react-icons/md";
 
 
 
@@ -44,7 +45,7 @@ const DropDownNav = () => {
 
     useEffect((PopHandler)=>{
         if(signed){
-            setSwip(name)
+            setSwip("Profile")
         }else{
 
             setSwip("Join us")
@@ -81,8 +82,8 @@ const DropDownNav = () => {
                     <Link to='/' className=" link " onClick={()=>dispatch(dropDownActions.notDroping())} >     <span >Home</span></Link>
                     <Link to='/Products' className=" link " onClick={()=>dispatch(dropDownActions.notDroping())}>      <span >Items</span></Link>
                     <Link to='/about'  className='link' onClick={()=>dispatch(dropDownActions.notDroping())}> <span >About</span></Link>
-                    <Link to='/' className='link' onClick={()=>dispatch(dropDownActions.notDroping())}><span >Contact</span> </Link>
-                    <Link to={signed? '/profile' :'#'}  className='link'  onClick={handelClick} > {swip}</Link>
+                    <Link to='/contact' className='link' onClick={()=>dispatch(dropDownActions.notDroping())}><span >Contact</span> </Link>
+                    <Link to={signed? '/profile' :'#'} className="flex items-center gap-1 link text-[#4f46e5]"  onClick={handelClick} >{(signed && <MdAccountCircle /> )} {swip}</Link>
                                 
                             
                     

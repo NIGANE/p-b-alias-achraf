@@ -3,7 +3,7 @@ import "./../../tailwindcss.css";
 import { Rounded } from "./../index";
 import { useSelector ,useDispatch} from "react-redux";
 import { CardV2 } from "./../index";
-import { addToCart } from "./../../store/productsSlice";
+import { addToCart } from "./../../store/cartSlice";
 import { show } from './../../store/loginPop'
 
 const Lister = () => {
@@ -35,6 +35,7 @@ const Lister = () => {
       />
     );
   });
+  
   return (
     <div className="mt-[2rem] flex flex-col justify-center items-center ">
       <h3 className="text-[2rem] md:text-[3rem] container ps-[2rem] tracking-tight text-center  font-semibold text-indigo-500">

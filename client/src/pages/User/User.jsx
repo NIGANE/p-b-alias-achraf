@@ -16,6 +16,9 @@ const User = () => {
   const user = useSelector((state) => state.user.userinfo);
   const signed = useSelector((state) => state.user.signed);
   useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },[])
+  useEffect(()=>{
     if (!signed) {
         dispatch(show());
       }
